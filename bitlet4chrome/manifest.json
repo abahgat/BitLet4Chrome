@@ -1,0 +1,20 @@
+{
+  "name": "BitLet 4 Chrome",
+  "version": "0.1",
+  "description": "Automatically opens torrent files with BitLet, making them ready for download.",
+  "icons": { "128": "assets/download_manager_128x128.png" },
+  "background_page": "background.html",
+  "permissions": ["http://*/*"],
+  "page_action": {
+    "default_title": "BitLet links",
+    "default_icon": "assets/download_manager_64x64.png",
+    "popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+//      "css": ["mystyles.css"],
+      "js": ["torrentUrls.js", "common.js", "content.js"]
+    }
+  ]
+}
