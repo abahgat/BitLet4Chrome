@@ -1,13 +1,8 @@
-chrome.extension.sendRequest({
-    msg: "bitletIcon"
-});
-debugMsg(logLevels.info, 'Icon request sent');
-
 checkLinks();
 
 function checkLinks() {
-    
     var anchors = document.getElementsByTagName("a");
+    var linkFound = false;
 
     for (var i=0; i<anchors.length; ++i){
         var anchor = anchors[i];
@@ -26,9 +21,14 @@ function checkLinks() {
             if (href.match(torrentLinkFormats[format])) {
                 debugMsg(logLevels.info, "link found: " + href);
                 linkBitLet(anchor, href);
+                linkFound = true;
                 break;
             }
         }
+    }
+
+    if (linkFound) {
+        displayIcon();
     }
 }
 
@@ -37,4 +37,11 @@ function linkBitLet(anchor, href){
         location.href = "http://www.bitlet.org/?torrent=" + encodeURIComponent(href) + "&source=bitlet4chrome";
         return false;
     }
+}
+
+function displayIcon() {
+    chrome.extension.sendRequest({
+        msg: "bitletIcon"
+    });
+    debugMsg(logLevels.info, 'Icon request sent');
 }
