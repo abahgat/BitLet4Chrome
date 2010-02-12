@@ -20,7 +20,7 @@ function checkLinks() {
         for (format in torrentLinkFormats) {
             if (href.match(torrentLinkFormats[format])) {
                 debugMsg(logLevels.info, "link found: " + href);
-                linkBitLet(anchor, href);
+                linkBitLetAsPopup(anchor, href);
                 linkFound = true;
                 break;
             }
@@ -32,10 +32,22 @@ function checkLinks() {
     }
 }
 
+/* changes the link to the torrent so that it opens BitLet's homepage, ready to download it */
 function linkBitLet(anchor, href){
     anchor.onclick = function() {
         location.href = "http://www.bitlet.org/?torrent=" + encodeURIComponent(href) + "&source=bitlet4chrome";
         return false;
+    }
+}
+
+/* makes torrent links open BitLet's download popup */
+function linkBitLetAsPopup(anchor, href){
+    anchor.onclick = function() {
+		chrome.extension.sendRequest({
+	        msg: "openPopup",
+			torrentUrl: href
+	    });
+		return false;
     }
 }
 

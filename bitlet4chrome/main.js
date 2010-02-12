@@ -8,6 +8,8 @@ function init() {
                 title: "Click to highlight torrent links..."
             });
             chrome.pageAction.show(sender.tab.id);
-        }
+        } else if (request.msg == "openPopup") {
+			BitLet.openPopupChecked(request.torrentUrl);
+		}
     });
 }
