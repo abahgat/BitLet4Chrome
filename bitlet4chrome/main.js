@@ -5,7 +5,7 @@ function init() {
         if (request.msg == "bitletIcon") {
             chrome.pageAction.setTitle({
                 tabId: sender.tab.id,
-                title: "Click to highlight torrent links..."
+                title: "BitLet 4 Chrome - This page contains links to torrents."
             });
             chrome.pageAction.show(sender.tab.id);
         } else if (request.msg == "openPopup") {
