@@ -7,7 +7,7 @@
  		"48": "images/download_manager_48x48.png"
 	},
   "background_page": "background.html",
-  "permissions": ["http://*/*"],
+  "permissions": ["tabs", "http://*/*"],
   "page_action": {
     "default_title": "BitLet links",
     "default_icon": "images/download_manager_64x64.png",
