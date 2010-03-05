@@ -66,7 +66,7 @@ function linkBitLetAsPopup(anchor, href){
 		return false;
     }
 	
-	addClass(anchor, "bitletlink");
+ 	anchor.style.backgroundColor = 'yellow';
 	
 	// add a tooltip on the link
 	anchor.onmouseover=function() { tooltip.show('<span class="headline">Download torrent with <span class="bitlet">BitLet<span class="dot">.</span><span class="org">org</span></span></span><br/><span class="small">(Right click and select the <i>save as</i> option to download just the .torrent file.)</span>'); }

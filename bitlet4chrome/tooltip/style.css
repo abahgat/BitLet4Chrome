@@ -6,7 +6,7 @@
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
-	background-color: darkgray;
+	background-color: khaki;
 	padding: 5px;
 	border: 1px outset silver;
 }
@@ -19,7 +19,7 @@
 #tt .bitlet {
 	font-weight: bold;
 	color: white;
-	text-shadow: 2px 2px 2px #000;
+	color: #666666;
 }
 #tt .dot {
 	color: #ff9900;

@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*"],
-      "css": ["tooltip/style.css", "css/content.css"],
+      "css": ["tooltip/style.css"],
       "js": ["torrentUrls.js", "common.js", "tooltip/script.js", "content.js"]
     }
   ]
