@@ -9,3 +9,11 @@ h1 {
 	font-size: 24px;
 	border-bottom: 1px solid silver;
 }
+
+.dot {
+	color: #ff9900;
+}
+
+yellow {
+	background-color: rgba(255, 255, 0, 0.5);
+}

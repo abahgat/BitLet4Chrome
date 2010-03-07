@@ -66,10 +66,18 @@ function linkBitLetAsPopup(anchor, href){
 		return false;
     }
 	
- 	anchor.style.backgroundColor = 'yellow';
+ 	anchor.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
 	
 	// add a tooltip on the link
-	anchor.onmouseover=function() { tooltip.show('<span class="headline">Download torrent with <span class="bitlet">BitLet<span class="dot">.</span><span class="org">org</span></span></span><br/><span class="small">(Right click and select the <i>save as</i> option to download just the .torrent file.)</span>'); }
+	anchor.onmouseover=function() {
+		tooltip.show(
+			'<span class="headline">' +
+			'<img src="' + chrome.extension.getURL('images/download_manager_16x16.png') + '" />&nbsp;' +
+			'Click to download torrent with <span class="bitlet">BitLet<span class="dot">.</span><span class="org">org</span></span></span>' +
+			'<br/><span class="small">(Right click + <i>save as</i> option downloads the .torrent file)</span>',
+			335
+			);
+	};
 	anchor.onmouseout=function() { tooltip.hide(); };
 }
 

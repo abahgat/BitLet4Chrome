@@ -1,29 +1,38 @@
 #tt {
-	width: 100px;
 	position: absolute;
 	display: block;
-	font-size: 12px;
+	font-size: 12px !important;
+	font-family: verdana, arial, sans-serif;
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
-	background-color: khaki;
-	padding: 5px;
-	border: 1px outset silver;
+	background-color: rgba(25, 25, 25, .75);
+	letter-spacing: 1px;
+	padding: 5px !important;
+	border: 1px solid rgb(25, 25, 25);
 }
 #tt .small {
-	font-size: smaller;
+	font-size: 9px !important;
+	color: silver;
+	padding-left: 20px !important;
+	padding-top: 2px !important;
 }
 #tt .headline {
-	font-size: 14px;
+	font-size: 12px !important;
+	color: white;
 }
 #tt .bitlet {
 	font-weight: bold;
-	color: white;
-	color: #666666;
+	color: rgb(245,255,250);
+	font-size: 13px !important;
+	text-shadow: 2px 2px 2px rgb(0,0,0);
 }
 #tt .dot {
 	color: #ff9900;
 }
 #tt .org {
 	color: #0099ff;
+}
+#tt img {
+	vertical-align: middle;
 }

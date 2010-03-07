@@ -1,7 +1,7 @@
 {
   "name": "BitLet 4 Chrome",
   "version": "0.1",
-  "description": "Automatically opens torrent files with BitLet, making them ready for download.",
+  "description": "Highlights links to .torrent files in web pages and makes them open BitLet.org's download popup when clicked.",
   "icons": { 
 		"128": "images/download_manager_128x128.png",
  		"48": "images/download_manager_48x48.png"
@@ -17,6 +17,7 @@
     {
       "matches": ["http://*/*"],
       "css": ["tooltip/style.css"],
+	  "all_frames": true,
       "js": ["torrentUrls.js", "common.js", "tooltip/script.js", "content.js"]
     }
   ]
