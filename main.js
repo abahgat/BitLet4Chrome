@@ -17,6 +17,15 @@ limitations under the License.
 function init() {
     debugMsg(logLevels.info, 'Background page init');
 
+    var menuId = chrome.contextMenus.create({
+        title: "Download with BitLet.org",
+        targetUrlPatterns: torrentLinkFormatsArr,
+        contexts: ["link"] //,
+        //onclick: function() {}
+    });
+
+    debugMsg(logLevels.info, 'Created context menu with id ' + menuId);
+
     chrome.extension.onRequest.addListener(function(request, sender) {
         if (request.msg == "bitletIcon") {
             chrome.pageAction.setTitle({

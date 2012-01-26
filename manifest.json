@@ -1,6 +1,6 @@
 {
   "name": "BitLet for Google Chrome",
-  "version": "0.1.4-SNAPSHOT",
+  "version": "0.1.4",
   "description": "Highlights links to .torrent files in web pages and makes them open BitLet.org's download popup when clicked.",
   "icons": { 
     "128": "images/download_manager_128x128.png",
