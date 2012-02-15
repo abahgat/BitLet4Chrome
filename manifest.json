@@ -1,12 +1,15 @@
 {
-  "name": "BitLet for Google Chrome",
-  "version": "0.1.3",
+  "manifest_version": 2,
+  "name": "BitLet for Google Chrome™",
+  "version": "0.1.4",
   "description": "Highlights links to .torrent files in web pages and makes them open BitLet.org's download popup when clicked.",
   "icons": { 
 		"128": "images/download_manager_128x128.png",
  		"48": "images/download_manager_48x48.png"
 	},
-  "background_page": "background.html",
+  "background": {
+    "scripts": ["common.js", "BitLet.js", "background.js" ]
+  },
   "permissions": ["tabs", "http://*/*"],
   "page_action": {
     "default_title": "BitLet links",
@@ -20,5 +23,6 @@
 	  "all_frames": true,
       "js": ["torrentUrls.js", "common.js", "tooltip/script.js", "content.js"]
     }
-  ]
+  ],
+  "web_accessible_resources": [ "images/download_manager_16x16.png" ]
 }
