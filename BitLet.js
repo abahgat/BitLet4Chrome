@@ -20,7 +20,7 @@ var BitLet = {
 	 Opens the torrentUrl in the popup
 	*/
 	openPopup : function(torrentUrl) {
-	    var popUpWindow = window.open("http://www.bitlet.org/download?torrent=" + torrentUrl + "&referer=" + encodeURIComponent(location.href) + '&source=bitlet4chrome','', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=400,height=150');
+	    var popUpWindow = window.open("http://www.bitlet.org/download?torrent=" + torrentUrl + "&referer=" + encodeURIComponent(location.href) + '&source=bitlet4chrome','', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=400,height=200');
 	    if (popUpWindow==null || typeof(popUpWindow)=="undefined") {
 	        return false;
 	    } else {
